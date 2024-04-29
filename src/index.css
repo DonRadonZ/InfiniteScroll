@@ -22,6 +22,11 @@ nav {
   margin-bottom: 40px;
 }
 
+section{ 
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
 
 
 div {
@@ -30,6 +35,9 @@ div {
   
 }
 
+.loading{
+  align-items: center;
+}
 
 
 div ul {
@@ -41,14 +49,28 @@ div ul {
 
 h3{
   font-size: 18px;
+  margin-left: 15px;
 }
 h4{
   font-size: 16px;
+  margin-left: 15px;
 }
+
+h5,p,span{
+  margin-left: 15px;
+}
+
+a{
+  margin-left: 15px;
+}
+
+
+
 
 div li {
   border: 1px solid #FC4100;
   border-radius: 8px;
+  
   /* text-align: center; */
 }
 

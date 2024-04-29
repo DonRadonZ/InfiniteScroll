@@ -1,19 +1,31 @@
-import React from "react";
+import { useEffect, useState} from "react"
 import InfiniteScroll from "react-infinite-scroll-component"
 import  axios  from "axios"
-import { useEffect, useState } from "react"
+
 import { ClipLoader } from "react-spinners";
 
 
-
+const override = {
+  display: "block",
+  margin: "0 auto",
+  borderColor: "black",
+};
 
 
 
 
 function Loader(){
+  const loading = useState(true);
+  const color = useState("#000");
+
   return(
-    <div>
-      <ClipLoader/>
+    <div className="loading">
+      <ClipLoader
+      color={color}
+      loading={loading}
+      size={200}
+      cssOverride={override}
+      />
     </div>
   )
 
@@ -61,7 +73,7 @@ function App() {
 
 
   return (
-    <>
+    <section>
     <nav>
       <h1>InfiniteScroll</h1>
     </nav>
@@ -95,7 +107,7 @@ function App() {
 
       </InfiniteScroll>
     </div>
-    </>
+    </section>
   )
 }
 
